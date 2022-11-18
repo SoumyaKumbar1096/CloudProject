@@ -29,32 +29,28 @@ public class Client {
 		// Application uploads the daily file into the Cloud  storage(S3 bucket)
 		Region region= Region.US_EAST_1;
 
-		String bucketName = "bucketsk12";
-		String filePath = "C://Users/hp/Documents/CPS2/Sem 3/Cloud and Edge/sales-data-upload";
-		String fileName = "01-10-2022-store2.csv";
-		String topicARN = "arn:aws:sns:us-east-1:887675141876:ClientFileUploaded";
-        String queueURL = "https://sqs.us-east-1.amazonaws.com/887675141876/clientMessageQueue";
 		
-//		Scanner sc= new Scanner(System.in); 
-//	    System.out.println("Please insert your bucketName:" ); 
-//	    String str= sc.nextLine();  
-//	    String bucketName = str;
-//	    
-//	    System.out.println("Please insert your path:" ); 
-//	    String str2= sc.nextLine(); 
-//	    String filePath =  str2;
-//	    
-//	    System.out.println("Please insert your filename:" ); 
-//	    String str3= sc.nextLine(); 
-//	    String fileName =  str3;
-//	    
-//	    System.out.println("Please insert your topicARN:" ); 
-//	    String str4= sc.nextLine(); 
-//	    String topicARN =  str4;
-//		
-//	    System.out.println("Please insert your queueURL:" ); 
-//	    String str5= sc.nextLine(); 
-//	    String queueURL =  str5;
+		
+		Scanner sc= new Scanner(System.in); 
+	    System.out.println("Please insert your bucketName:" ); 
+	    String str= sc.nextLine();  
+	    String bucketName = str;
+	    
+	    System.out.println("Please insert your path:" ); 
+	    String str2= sc.nextLine(); 
+	    String filePath =  str2;
+	    
+	    System.out.println("Please insert your filename:" ); 
+	    String str3= sc.nextLine(); 
+	    String fileName =  str3;
+	    
+// 	    System.out.println("Please insert your topicARN:" ); 
+// 	    String str4= sc.nextLine(); 
+// 	    String topicARN =  str4;
+		
+	    System.out.println("Please insert your queueURL:" ); 
+	    String str5= sc.nextLine(); 
+	    String queueURL =  str5;
         
 		uploadFile(region, bucketName, filePath, fileName);
 		
