@@ -44,20 +44,25 @@ public class Client {
 	    String str3= sc.nextLine(); 
 	    String fileName =  str3;
 	    
+	   //Uncomment when running the application using Lambda function
 // 	    System.out.println("Please insert your topicARN:" ); 
 // 	    String str4= sc.nextLine(); 
 // 	    String topicARN =  str4;
-		
+	
+	    //Uncomment when running the application using Worker java implementation
 	    System.out.println("Please insert your queueURL:" ); 
 	    String str5= sc.nextLine(); 
 	    String queueURL =  str5;
         
+		
 		uploadFile(region, bucketName, filePath, fileName);
 		
 		// Publish to the topic(Use SNS service to notify worker application)
+		//Commnet when not using SNS and Lambda function
 		//notifyWorker(region, bucketName, fileName, topicARN);
 		
 		//Send an SQS message
+		//Comment when not using SQS and Worker Java implementation
 		sendSQS(region, bucketName, fileName, queueURL);	
 	}
 	
